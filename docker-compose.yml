@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  web:
+    container_name: web
+    build: ./docker/app
+    ports:
+      - 8000:80
+    privileged: true
+    volumes:
+      - ./web:/var/www/web
+    stdin_open: true
+    tty: true
+    depends_on: 
+      - db
+  db:
+    container_name: db
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_DB: ut-skillup
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+    volumes: 
+      - ./docker/db:/var/lib/postgresql/data
