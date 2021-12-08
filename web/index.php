@@ -14,7 +14,7 @@
         <div class="name"><span class="label">名前: <input type="text" name="name" value=""><br>
         <div class="honbun"><span class="label">本文: <textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard"
         placeholder="100字以内で入力してください。"></textarea>
-        < type="submit">投稿</button>
+        <button type="submit">投稿</button>
     </form>
 </section>
 <section class=""toukou>
